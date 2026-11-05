@@ -1,0 +1,6 @@
+{
+  "name": "replace-me",
+  "source_url": "https://example.com/organization/repository.git",
+  "commit": "replace-with-full-commit-id",
+  "hosts": ["linux"]
+}

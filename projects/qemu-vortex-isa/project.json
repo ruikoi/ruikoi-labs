@@ -1,0 +1,22 @@
+{
+  "name": "qemu-vortex-isa",
+  "hosts": [
+    "linux"
+  ],
+  "sources": {
+    "qemu": {
+      "url": "https://github.com/ruikoi/qemu.git",
+      "upstream": "https://gitlab.com/qemu-project/qemu.git",
+      "branch": "vortex-gpgpu-isa",
+      "commit": "63a4fd3a0c42d468b20212138cea3526a3c3f30c",
+      "base": "005c61c0ef6f6ae615283440b4bb7be51b2c6ddd"
+    },
+    "vortex": {
+      "url": "https://github.com/ruikoi/vortex.git",
+      "upstream": "https://github.com/vortexgpgpu/vortex.git",
+      "branch": "vortex-gpgpu-isa",
+      "commit": "8a6c10e2d033e2e515a7efa0dcc3cf599592153c",
+      "base": "7fe19369587c087f902c3e2bc2add612aa910a95"
+    }
+  }
+}

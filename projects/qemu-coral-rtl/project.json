@@ -1,0 +1,28 @@
+{
+  "name": "qemu-coral-rtl",
+  "hosts": [
+    "linux"
+  ],
+  "sources": {
+    "qbox": {
+      "url": "https://github.com/ruikoi/qbox.git",
+      "upstream": "https://github.com/qualcomm/qbox.git",
+      "branch": "coral-npu-rtl",
+      "commit": "24f32c42975e13cc999cff05dd1debbf39eb6d6a",
+      "base": "b745c62ddfe7a521c2afe7107c0bdae086dd1f53"
+    },
+    "coralnpu": {
+      "url": "https://github.com/ruikoi/coralnpu.git",
+      "upstream": "https://github.com/google-coral/coralnpu.git",
+      "branch": "coral-npu-rtl",
+      "commit": "701d1a525dff496cd583ad9e3e729888da72a422",
+      "base": "363f79774a3b40087479f9f89cff91dc98c492cd"
+    }
+  },
+  "dependencies": {
+    "systemc": "febde7a3e007ce3030cf574a4cb6fcc13d0ed820",
+    "cci": "aff681775057a9a332983b240f27bb4e6aae3887",
+    "scp": "0821c329a1df363503f5ea12309cc5fa2c064530",
+    "libqemu": "aeaa82f79b19c9d79ff4b8fc4f23b36369f8c7ea"
+  }
+}

@@ -1,0 +1,51 @@
+diff --git a/libqemu/wrappers/console.c b/libqemu/wrappers/console.c
+index babdd5e2c..c835e0164 100644
+--- a/libqemu/wrappers/console.c
++++ b/libqemu/wrappers/console.c
+@@ -129,15 +129,25 @@ DisplayChangeListenerOps *libqemu_dcl_ops_new(void)
+ {
+     DisplayChangeListenerOps *ops = g_new0(DisplayChangeListenerOps, 1);
+     // Trivial functions, no need to run on main thread
++#ifdef CONFIG_OPENGL
+     ops->dpy_gfx_check_format = console_gl_check_format;
++#else
++    ops->dpy_gfx_check_format = sdl2_2d_check_format;
++#endif
+     ops->dpy_mouse_set = sdl_mouse_warp;
+     ops->dpy_cursor_define = sdl_mouse_define;
++#ifdef CONFIG_OPENGL
+     ops->dpy_gl_scanout_disable = sdl2_gl_scanout_disable;
+     ops->dpy_gl_scanout_texture = sdl2_gl_scanout_texture;
+     ops->dpy_gl_update = sdl2_gl_scanout_flush;
+     ops->dpy_gfx_switch = sdl2_gl_switch;
+     ops->dpy_gfx_update = sdl2_gl_update;
+     ops->dpy_refresh = sdl2_gl_refresh;
++#else
++    ops->dpy_gfx_switch = sdl2_2d_switch;
++    ops->dpy_gfx_update = sdl2_2d_update;
++    ops->dpy_refresh = sdl2_2d_refresh;
++#endif
+     ops->dpy_poll_events = sdl2_poll_events;
+     return ops;
+ }
+@@ -198,3 +208,20 @@ void libqemu_sdl2_console_set_window_id(struct sdl2_console *sdl2_con,
+     qemu_console_set_window_id(con, (uintptr_t)info.info.cocoa.window);
+ #endif
+ }
++
++#ifndef CONFIG_OPENGL
++/* Preserve the exported libqemu ABI in a console-only build. Fail explicitly
++ * if a graphical client requests GL; the Coral platform never does. */
++void sdl2_gl_update(DisplayChangeListener *dcl, int x, int y, int w, int h)
++{ g_error("OpenGL unavailable in the Coral console platform"); }
++void sdl2_gl_switch(DisplayChangeListener *dcl, DisplaySurface *surface)
++{ g_error("OpenGL unavailable in the Coral console platform"); }
++void sdl2_gl_refresh(DisplayChangeListener *dcl)
++{ g_error("OpenGL unavailable in the Coral console platform"); }
++QEMUGLContext sdl2_gl_create_context(DisplayGLCtx *dgc, QEMUGLParams *params)
++{ g_error("OpenGL unavailable in the Coral console platform"); return NULL; }
++void sdl2_gl_destroy_context(DisplayGLCtx *dgc, QEMUGLContext ctx)
++{ g_error("OpenGL unavailable in the Coral console platform"); }
++int sdl2_gl_make_context_current(DisplayGLCtx *dgc, QEMUGLContext ctx)
++{ g_error("OpenGL unavailable in the Coral console platform"); return -1; }
++#endif

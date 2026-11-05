@@ -1,0 +1,19 @@
+.work/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+*.sock
+*.img
+*.cpio*
+*.elf
+*.bin
+*.tar*
+.env
+.env.*
+!.env.example
+local.*
+
+# Local agent notes and private test progress
+.agent/

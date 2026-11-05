@@ -1,0 +1,17 @@
+# Actual acceptance output: selected lines and report fields.
+
+[Models | Linux guest with UID 1000]
+MNIST_CLASSIFICATION correct=2 total=2 accuracy=100.00%
+MOBILENET_GPU_LAUNCH layer=69/69 name=gpu_softmax type=6 elements=1000
+MOBILENET_RESULT gpu=284 keras=284 layers=69 gpu_all_ops=1
+
+[Native ring wraparound | IRQ waits | independent AXI channel stalls]
+VORTEX_QBOX_IRQ waits=122 driver_irqs=5028 rtl_pulses=5028 seq_start=2248 seq_end=5028 aw_stalls=178901
+  w_stalls=334461 ar_stalls=979245 idle_gates=15154 uid=1000 device=/dev/vortex0
+VORTEX_INTERFACE_ALL_PASS
+
+[Reset and recovery]
+VORTEX_RTL_QUEUE_RESET_PASS seqnum_before=5028 seqnum_after=0 tail_after=0 native_reset=1
+VORTEX_RTL_CASE_EXIT=recovery:0
+VORTEX_QBOX_RTL_ALL_PASS
+VORTEX_RTL_TEST_EXIT=0

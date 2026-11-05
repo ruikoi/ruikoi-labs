@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "checkpoints/gemma3-270m-it/_CHECKPOINT_METADATA",
+      "generation": "1756300495254879",
+      "size": "258",
+      "md5Hash": "6N2ReIHRwKbqypJOqWqRcw=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/_METADATA",
+      "generation": "1756300497543425",
+      "size": "48166",
+      "md5Hash": "yElY3W2xa8IphCBoUxIAOA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/commit_success.txt",
+      "generation": "1756300562093708",
+      "size": "0",
+      "md5Hash": "1B2M2Y8AsgTpgAmY7PhCfg=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/d/b502ddaf2313428c5e9f3efc5036b36c",
+      "generation": "1756300502257236",
+      "size": "69445",
+      "md5Hash": "x/ME4xTgQZXdsOrv5SNXAQ=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/d_$folder$",
+      "generation": "1756300488385499",
+      "size": "6",
+      "md5Hash": "hRFItP2P1650vZEAxcDImA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/descriptor/descriptor.pbtxt",
+      "generation": "1756300504528939",
+      "size": "511",
+      "md5Hash": "dgRqdc0u8QfwfsEw3TMIAw=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/descriptor/uuid-3ecca258-429a-43f2-ae91-0ace2d962c94",
+      "generation": "1756300507110064",
+      "size": "45",
+      "md5Hash": "YEt1o2Zsi/VX9jmwZheaJQ=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/descriptor_$folder$",
+      "generation": "1756300490397843",
+      "size": "6",
+      "md5Hash": "hRFItP2P1650vZEAxcDImA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/manifest.ocdbt",
+      "generation": "1756300499955006",
+      "size": "120",
+      "md5Hash": "Q1LcRYoOUj942ANOlJ/tlg=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0/d/12babaca82065b5d3993688c838d2d7a",
+      "generation": "1756300514908247",
+      "size": "576",
+      "md5Hash": "8wwYedD1PSj7vmIReNNddw=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0/d/2e25b6b92b4fc8bfce66a12ce24c55f1",
+      "generation": "1756300517384706",
+      "size": "69429",
+      "md5Hash": "TQQf3NXNTwLpFRnJzRCZZA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0/d/87f13860afe52f58ef94fdd1162110fe",
+      "generation": "1756300560882217",
+      "size": "418861889",
+      "md5Hash": "cbdmiJgKsti7lXUy2jPkXA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0/d_$folder$",
+      "generation": "1756300509423622",
+      "size": "6",
+      "md5Hash": "hRFItP2P1650vZEAxcDImA=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0/manifest.ocdbt",
+      "generation": "1756300512604739",
+      "size": "228",
+      "md5Hash": "NvBrvK1GrA3sQEPSgOPi5Q=="
+    },
+    {
+      "name": "checkpoints/gemma3-270m-it/ocdbt.process_0_$folder$",
+      "generation": "1756300492316555",
+      "size": "6",
+      "md5Hash": "hRFItP2P1650vZEAxcDImA=="
+    }
+  ]
+}

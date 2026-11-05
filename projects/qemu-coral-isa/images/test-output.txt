@@ -1,0 +1,15 @@
+# Actual acceptance output: selected lines and report fields.
+
+[QEMU guest | Gemma3-270M | INT8 projections + FP32 operators]
+question: "1+1=?"
+text: "1+1 = 2\n"  stop_reason: "eos"
+npu_jobs: 532  npu_steps: 433294027
+GEMMA_CHAT_TEST_EXIT=0
+
+[Host compiler | MobileNetV2 1.0/224 | independent CPU references]
+JAX     top1: 281  reference_top1: 281  max_abs_error: 2.9802322e-07
+TFLite  top1: 282  reference_top1: 282  max_abs_error: 9.2387199e-07
+
+[Host compiler | official Gemma3-270M BF16]
+generated_ids: [9079, 236761]  text: " Paris."
+executed_npu_dispatches: 2540

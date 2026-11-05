@@ -1,0 +1,2 @@
+# Preserve CRLF context from the pinned Ramulator source.
+common/accelerators/patches/ramulator-template.patch -text whitespace=cr-at-eol

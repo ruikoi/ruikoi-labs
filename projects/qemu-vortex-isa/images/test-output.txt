@@ -1,0 +1,15 @@
+# Actual acceptance output: selected lines and report fields.
+
+[MNIST | 100 inputs | GPU / guest CPU / Python references]
+MNIST_CLASSIFICATION correct=99 total=100 accuracy=99.00%
+
+[MobileNetV2 0.35/96 | 69 operators | 207 numerical comparisons]
+MOBILENET_GPU_LAUNCH layer=69/69 name=gpu_softmax type=6 elements=1000
+MOBILENET_LAYER_CHECK name=gpu_softmax compare=GPU_vs_CPU elements=1000 max_abs=0 atol=9.99999975e-06
+  rtol=9.99999975e-06 errors=0
+MOBILENET_LAYER_CHECK name=gpu_softmax compare=GPU_vs_Keras elements=1000 max_abs=7.21216202e-06
+  atol=0.00300000003 rtol=0.00300000003 errors=0
+MOBILENET_RESULT gpu=284 keras=284 layers=69 gpu_all_ops=1
+
+VORTEX_GUEST_ALL_PASS
+VORTEX_TEST_EXIT=0

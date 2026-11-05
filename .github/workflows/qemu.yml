@@ -1,0 +1,27 @@
+name: Build and smoke a QEMU project
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        type: choice
+        options: [qemu-multiarch, qemu-sg200x, qemu-d9m]
+        required: true
+jobs:
+  qemu:
+    runs-on: ${{ inputs.project == 'qemu-d9m' && 'macos-15' || 'ubuntu-24.04' }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Linux dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ninja-build pkg-config libglib2.0-dev libpixman-1-dev liblzma-dev libslirp-dev python3-venv
+      - name: macOS dependencies
+        if: runner.os == 'macOS'
+        run: brew install ninja pkg-config glib pixman xz
+      - name: Fetch, build and test
+        env:
+          PROJECT: ${{ inputs.project }}
+        run: |
+          python3 tools/lab.py "$PROJECT" fetch
+          python3 tools/lab.py "$PROJECT" build --jobs 4
+          python3 tools/lab.py "$PROJECT" test

@@ -1,0 +1,13 @@
+FROM ubuntu:24.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential git ca-certificates curl wget python3 python3-venv python3-pip \
+    ninja-build cmake pkg-config clang-19 lld-19 llvm-19 openjdk-21-jdk-headless \
+    libglib2.0-dev libpixman-1-dev libslirp-dev libfdt-dev libsdl2-dev \
+    libelf-dev libzip-dev libasio-dev libfmt-dev libboost-all-dev libzstd-dev liblz4-dev libssl-dev \
+    zlib1g-dev libtool autoconf automake bison flex bc cpio rsync unzip xz-utils \
+    device-tree-compiler gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
+    gcc-riscv64-linux-gnu g++-riscv64-linux-gnu \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
+CMD ["bash"]

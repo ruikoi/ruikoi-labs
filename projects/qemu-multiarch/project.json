@@ -1,0 +1,12 @@
+{
+  "name": "qemu-multiarch",
+  "qemu_url": "https://github.com/ruikoi/qemu.git",
+  "branch": "multiarch/virt-domains",
+  "base_tag": "v11.1.3",
+  "base_commit": "005c61c0ef6f6ae615283440b4bb7be51b2c6ddd",
+  "commit": "3919874f50a2902d5c1f2c7ae9626f0de6b3389d",
+  "hosts": [
+    "linux",
+    "darwin"
+  ]
+}

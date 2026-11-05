@@ -1,0 +1,28 @@
+{
+  "name": "qemu-vortex-rtl",
+  "hosts": [
+    "linux"
+  ],
+  "sources": {
+    "qbox": {
+      "url": "https://github.com/ruikoi/qbox.git",
+      "upstream": "https://github.com/qualcomm/qbox.git",
+      "branch": "vortex-gpgpu-rtl",
+      "commit": "9b3c418e2ca5222191645299a1561501d997d911",
+      "base": "b745c62ddfe7a521c2afe7107c0bdae086dd1f53"
+    },
+    "vortex": {
+      "url": "https://github.com/ruikoi/vortex.git",
+      "upstream": "https://github.com/vortexgpgpu/vortex.git",
+      "branch": "vortex-gpgpu-rtl",
+      "commit": "604c91540ebe51ffe39a967e39150475571945c2",
+      "base": "7fe19369587c087f902c3e2bc2add612aa910a95"
+    }
+  },
+  "dependencies": {
+    "systemc": "febde7a3e007ce3030cf574a4cb6fcc13d0ed820",
+    "cci": "aff681775057a9a332983b240f27bb4e6aae3887",
+    "scp": "0821c329a1df363503f5ea12309cc5fa2c064530",
+    "libqemu": "aeaa82f79b19c9d79ff4b8fc4f23b36369f8c7ea"
+  }
+}

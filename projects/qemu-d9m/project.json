@@ -1,0 +1,12 @@
+{
+  "name": "qemu-d9m",
+  "qemu_url": "https://github.com/ruikoi/qemu.git",
+  "branch": "d9m/minivirt",
+  "base_tag": "v11.1.3",
+  "base_commit": "005c61c0ef6f6ae615283440b4bb7be51b2c6ddd",
+  "commit": "45f1204730d7fcf9728803eed3f9e56e3414ffd3",
+  "hosts": [
+    "linux",
+    "darwin"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "qemu-coral-isa",
+  "hosts": [
+    "linux"
+  ],
+  "sources": {
+    "qemu": {
+      "url": "https://github.com/ruikoi/qemu.git",
+      "upstream": "https://gitlab.com/qemu-project/qemu.git",
+      "branch": "coral-npu-isa",
+      "commit": "af2519afafae971e131e9f12577125cda3369416",
+      "base": "005c61c0ef6f6ae615283440b4bb7be51b2c6ddd"
+    },
+    "mpact": {
+      "url": "https://github.com/ruikoi/coralnpu-mpact.git",
+      "upstream": "https://github.com/google-coral/coralnpu-mpact.git",
+      "branch": "coral-npu-isa",
+      "commit": "917319ef39ae92845fcefbbadfe04d17df5ea520",
+      "base": "e2a26e6d983f13d4c10875e4e5878a6171c04a06"
+    },
+    "coralnpu": {
+      "url": "https://github.com/ruikoi/coralnpu.git",
+      "upstream": "https://github.com/google-coral/coralnpu.git",
+      "branch": "coral-npu-isa",
+      "commit": "227b388aaceb1136cd4b72dc485435c195e86acf",
+      "base": "363f79774a3b40087479f9f89cff91dc98c492cd"
+    },
+    "compiler": {
+      "url": "https://github.com/ruikoi/coralnpu-compiler.git",
+      "upstream": "https://github.com/google-coral/coralnpu-compiler.git",
+      "branch": "coral-npu-isa",
+      "commit": "9dacd27a11a5297980cf68f95589667e7b7dbea0",
+      "base": "f03fbf1fa5633558f1b1cbe8128a413e7c713f71"
+    }
+  }
+}

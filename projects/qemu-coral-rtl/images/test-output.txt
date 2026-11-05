@@ -1,0 +1,15 @@
+# Actual acceptance output: selected lines and report fields.
+
+[Small profile | Linux guest + actual Coral RTL]
+CORAL_RTL_LINUX_DIGITS_PASS mode=tcm cases=20 output_bytes=200 correct=18 compute_ns=82859 external_axi=20
+CORAL_RTL_LINUX_DIGITS_PASS mode=shared-axi cases=20 output_bytes=200 correct=18 compute_ns=208634
+  external_axi=4340
+CORAL_RTL_LINUX_RECOVERY_PASS reset_after_fault=1
+CORAL_RTL_LINUX_IRQ_PASS handled=43
+CORAL_RTL_LINUX_ALL_PASS
+
+[High-memory profile | Gemma3-270M layer 0]
+GEMMA_QBOX_LAYER0_COMPARE cosine=1.000000000 rel_max_error=2.59948543e-09
+GEMMA_QBOX_LAYER0_PASS backdoor=off
+GEMMA_QBOX_DONE irq=1 external_axi=352192
+GEMMA_QBOX_TEST_EXIT=0
